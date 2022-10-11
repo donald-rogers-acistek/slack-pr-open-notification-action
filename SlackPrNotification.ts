@@ -84,25 +84,16 @@ if (makePretty) {
     const message: Object = {
         blocks: [
             {
-                type: "section",
-                block_id: "commit_title",
-                text: {
-                    type: "mrkdwn",
-                    text: "*<" + prUrl + "|" + prTitle + ">* #" + prNum + " from *" + compareBranchText + "* to *" + baseBranchText + "*." + mentions
-                }
-            },
-            {
                 type: "context",
-                block_id: "committer_meta",
                 elements: [
                     {
                         type: "image",
                         image_url: authorIconUrl,
-                        alt_text: "images"
+                        alt_text: "author"
                     },
                     {
                         type: "mrkdwn",
-                        text: "*" + authorName + "*"
+                        text: mentions + authorName + " opened pull request <" + prUrl + "|" + prTitle + "> from `" + compareBranchText + "` to `" + baseBranchText + "`"
                     }
                 ]
             }
