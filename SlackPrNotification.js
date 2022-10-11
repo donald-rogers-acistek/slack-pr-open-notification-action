@@ -140,14 +140,6 @@ else {
                     },
                 ]
             },
-            {
-                type: "section",
-                text: {
-                    type: "plain_text",
-                    text: prBody,
-                    emoji: true
-                }
-            },
         ]
     };
     axios_1["default"].post(url, message);
