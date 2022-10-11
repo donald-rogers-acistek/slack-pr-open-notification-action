@@ -142,14 +142,6 @@ if (makePretty) {
                     },
                 ],
             },
-            {
-                type: "section",
-                text: {
-                    type: "plain_text",
-                    text: prBody,
-                    emoji: true,
-                },
-            },
         ]
     };
     axios.post(url, message);
